@@ -1,0 +1,199 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style type="text/css">
+    .main-menu {
+        background-color: black;
+        display: flex;
+    }
+
+        .main-menu ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+            .main-menu ul li {
+                margin: 10px;
+            }
+
+                .main-menu ul li a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                    margin: 15px
+                }
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../content/img/banner.png');
+        background-size: cover;
+        background-position: center;
+        height: 400px
+    }
+
+    .banner-content {
+        text-align: center;
+        color: antiquewhite;
+    }
+
+        .banner-content h1 {
+            font-size: 100px;
+            margin-bottom: 20px
+        }
+
+        .banner-content a {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            background-color: dimgrey;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px
+        }
+
+    .prodList {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+        .prodList .list-content {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px
+        }
+
+    .prodItems {
+        text-align: center;
+        padding: 10px;
+    }
+
+        .prodItems img {
+            width: 100%;
+            height: auto
+        }
+
+        .prodItems h2 {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            font-size: 30px
+        }
+
+    .prodContent {
+        display: flex;
+        justify-content: center;
+    }
+
+    .newArrivals {
+        text-align: center;
+        padding: 10px
+    }
+
+    .arrivals-content {
+        border: 1px solid black;
+    }
+
+        .arrivals-content h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .arrivals-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .arrivals-content h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .arrivals-content .price {
+            text-align: center;
+            color: dimgrey;
+        }
+</style>
+
+<section id="main-content">
+    <section class="main-menu">
+        <ul>
+            <li>
+                <a href="#">HOME</a>
+                <a href="#">COLLECTIONS</a>
+                <a href="#">SHOP</a>
+                <a href="#">LOOKBOOK</a>
+                <a href="#">BLOG</a>
+                <a href="#">FAQS</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT US</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Cửa hàng quần áo</h1>
+            <a href="#" class="btn">Mua sắm</a>
+        </div>
+    </section>
+
+    <section class="prodList">
+        <ul class="list-content">
+            <li class="prodItems">
+                <h2>Quần áo</h2>
+                <img src="~/Content/img/clothes1.png" />
+            </li>
+        </ul>
+
+        <ul class="list-content">
+            <li class="prodItems">
+                <h2>Giày</h2>
+                <img src="~/Content/img/shoes2.png" />
+            </li>
+        </ul>
+
+        <ul class="list-content">
+            <li class="prodItems">
+                <h2>Trang sức</h2>
+                <img src="~/Content/img/trang sức2.png" />
+            </li>
+        </ul>
+    </section>
+
+    <section class="newArrivals">
+        <h2>NEW ARRIVALS</h2>
+        <div class="prodContent">
+            <div class="arrivals-content">
+                <img src="~/Content/img/1.png" /><h3>Áo thun thể thao</h3>
+                <p class="price">150.000VNĐ</p>
+            </div>
+
+            <div class="arrivals-content">
+                <img src="~/Content/img/2.png" /><h3>Áo thun thời trang</h3>
+                <p class="price">150.000VNĐ</p>
+            </div>
+
+
+            <div class="arrivals-content">
+                <img src="~/Content/img/3.png" /><h3>Áo thun thời trang</h3>
+                <p class="price">150.000VNĐ</p>
+            </div>
+
+            <div class="arrivals-content">
+                <img src="~/Content/img/4.png" /><h3>Áo thun thời trang</h3>
+                <p class="price">150.000VNĐ</p>
+            </div>
+
+            <div class="arrivals-content">
+                <img src="~/Content/img/5.png" /><h3>Áo thun thời trang</h3>
+                <p class="price">150.000VNĐ</p>
+            </div>
+        </div>
+    </section>
+
+</section>

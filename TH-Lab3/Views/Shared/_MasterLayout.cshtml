@@ -1,0 +1,134 @@
+﻿<style type="text/css">
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        border: 1px solid #000000;
+    }
+
+    header {
+        background-color: antiquewhite;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    footer {
+        background-color: antiquewhite;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 500px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .catrgory {
+        display: flex;
+    }
+
+        .catrgory ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+            .catrgory ul li {
+                padding: 0 10px 0 0;
+                margin-left: 30px;
+            }
+
+                .catrgory ul li a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .contact {
+        display: flex;
+    }
+
+        .contact ul {
+            list-style-type: none;
+        }
+
+            .contact ul li {
+            }
+
+                .contact ul li a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                }
+
+    .social-media {
+        display: flex;
+    }
+
+        .social-media ul {
+            list-style-type: none;
+        }
+
+            .social-media ul li {
+            }
+
+                .social-media ul li a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="~/Content/img/Ảnh chụp màn hình 2024-09-22 212051.png" alt="Logo" />
+            </div>
+
+
+            <div class="catrgory">
+                <ul>
+                    <li><a href="#">Shopping Cart</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="#">Sign in or Create an account</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>
+            <div class="contact">
+                <ul>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Số điện thoại</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

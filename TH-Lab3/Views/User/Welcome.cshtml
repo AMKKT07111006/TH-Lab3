@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+
+    <title>WELCOME PAGE: Sử dụng hộp thoại Prompt để nhập liệu và sử dụng câu lệnh document.write để hiển thị dữ liệu</title>
+}
+
+<body>
+    <script language="javascript">
+        var Ten, Tuoi; //khai báo biến
+
+        //nhập dữ liệu
+        Ten = prompt("Hãy nhập tên của bạn", " ");
+        Tuoi = prompt("Hãy nhập tuổi của bạn", "10");
+
+        //hiển thị dữ liệu
+        document.write("Hello <b>" + Ten + "</b> <br />");
+        document.write("Tuổi của bạn là: <u>" + Tuoi + "</u>"); 
+    </script>
+</body>

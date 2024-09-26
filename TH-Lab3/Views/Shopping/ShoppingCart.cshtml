@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+
+    <script language="javascript">
+        function CalculateTotal() {
+            var dg = parsefloat(document.getElementById("iPrice").value);
+            var sl = parsefloat(document.getElementById("iQuantity").value);
+
+            document.getElementById("err_Price").innerHTML = "";
+            document.getElementById("err_Quantity").innerHTML = "";
+
+            if (dg < 0) {
+                document.getElementById("err_Price").innerHTML = "Đơn giá phải lớn hơn hoặc bằng 0";
+            }
+
+            if (sl < 1 || sl > 10) {
+                document.getElementById("err_Quantity").innerHTML = "Số lượng nằm trong khoảng [1,10]";
+            }
+
+            else {
+                document.getElementById("txtTotal").value = dg * sl;
+            }
+       
+        }
+
+    </script>
+}
+<form name="ShoppingCart" method="post">
+    @*Mỗi khi đơn giá hoặc số lượng thay dổi giá trị thì tự động tính lại thành tiền*@
+
+    Đơn giá: <input type="number" id="iPrice" name="Price" min="0"
+                    onchange="CalculateTotal();" />  
+    
+                    <span id="err_Price" style="color:red;"></span>
+                    
+                        <br /><br /> @*tối thiểu 0 đồng*@
+
+
+
+                    Số lượng: <input type="number" id="iQuantity" name="Quantity" min="1" max="10"
+                                     onchange="CalculateTotal();" />
+
+                    <span id="err_Quantity" style="color:red;"></span>
+
+                    <br /><br /> @*tối thiểu 1 sp tối đa 10 sp*@
+
+
+
+                    Thành tiền: <input type="text" id="txtTotal" name=" Total" />
+                </form>
+

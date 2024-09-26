@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+
+    ViewBag.title = "Welcome2";
+
+    <script language="javascript">
+        function DisplayWelcome(msg) {
+            alert("hello" + msg);
+        }
+    </script> //internal js
+
+
+    <script src="~/Scripts/js/UserJS.js"></script> //nhúng file external js vào file html
+}
+
+
+<body>
+    <form name="Welcome">
+        <input type="text" name="txtName" value="Thủy thủ mặt trăng"
+               size="30" maxlength="50" max="30" />
+
+        <input type="button" name="btnWelcome" value="Welcome"
+               onclick="DisplayWelcome(txtName.value); Homnay();"/> @*gọi hàm trong js để xử lý action của nút Welcome *@
+
+        </form>
+
+
+</body>
